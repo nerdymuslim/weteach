@@ -1117,13 +1117,57 @@
         </button>
       </form>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
       document
         .getElementById("signup_btn")
         .addEventListener("click", function () {
           document.getElementById("email").focus();
         });
+
+      var typed = new Typed("#title", {
+        strings: [
+          "for Hipster Developers.",
+          "for Awesome Developers.",
+          "that integrates with your favorite services.",
+        ],
+        typeSpeed: 60,
+        backSpeed: 20,
+        backDelay: 1500,
+        startDelay: 0,
+        loop: true,
+      });
     </script>
+    <style type="text/css" data-typed-js-css="true">
+      .typed-cursor {
+        opacity: 1;
+      }
+
+      .typed-cursor.typed-cursor--blink {
+        animation: typedjsBlink 0.7s infinite;
+        -webkit-animation: typedjsBlink 0.7s infinite;
+        animation: typedjsBlink 0.7s infinite;
+      }
+
+      @keyframes typedjsBlink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      @-webkit-keyframes typedjsBlink {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
   </body>
 </html>
