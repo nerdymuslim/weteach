@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>weteach</title>
+    <title>
+      WeTeach - A Course Platform for Developers, built by Developers
+    </title>
+    <style>
+      .gradient {
+        background: linear-gradient(45deg, #667eea, #ed64a6);
+      }
+    </style>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
@@ -33,7 +40,7 @@
           <a
             class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="#"
-            ><img src="./img/logo-light.png" class="h-10" alt="weteach logo"
+            ><img src="./img/logo-light.png" class="h-8" alt="weteach logo"
           /></a>
         </div>
         <button
@@ -55,14 +62,12 @@
           class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left pr-6"
         >
           <h1 class="my-2 text-3xl font-bold leading-tight">
-            A course platform for Developers
+            A course platform <span id="title" class="text-white-500"></span>
           </h1>
-          <h1 class="my-4 text-3xl font-bold leading-tight">
-            built by Developers.
-          </h1>
-          <p class="leading-normal text-2xl mb-8">
-            The course platform you've always dreamed of. Create your course
-            website with ease.
+
+          <p class="leading-normal text-1xl mb-8">
+            Create a kickass course and integrate your favorite services
+            including paystack, flutterwave, and many others!
           </p>
 
           <form
@@ -94,6 +99,18 @@
               Submit
             </button>
           </form>
+          <div
+            class="mt-8 flex text-sm border border-gray-200 rounded-full p-2 text-white-500 text-sm mx-auto lg:mx-0 mb-12 lg:mb-0"
+          >
+            <span
+              class="bg-pink-500 text-white rounded-full px-3 h-6 flex items-center hidden xl:inline"
+              >Signup</span
+            >
+            <span class="px-2 flex items-center"
+              ><span class="hidden sm:inline">for progress updates and</span>
+              gain early access when we release!</span
+            >
+          </div>
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
@@ -448,7 +465,9 @@
           Some of our Awesome Features
         </h2>
 
-        <div class="flex flex-wrap pb-16">
+        <div
+          class="block md:flex flex-wrap mb-16 bg-white rounded shadow overflow-hidden"
+        >
           <div class="w-5/6 sm:w-1/2 p-6">
             <h3
               class="text-3xl text-gray-800 font-bold leading-none mb-3 mt-32"
@@ -457,7 +476,8 @@
             </h3>
             <p class="text-gray-600 mb-8">
               You can integrate your Paystack or Flutterwave system right into
-              your course.
+              your course. This means when someone pays for your course, the
+              money will be deposited directly into your account.
             </p>
           </div>
           <div class="w-full sm:w-1/2 p-6">
@@ -605,7 +625,9 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div
+          class="block md:flex flex-wrap mb-16 bg-white rounded shadow overflow-hidden"
+        >
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <svg
               id="f241e7b9-92bc-4a39-8e1f-dd6f59c49ece"
@@ -1100,13 +1122,57 @@
         </button>
       </form>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
       document
         .getElementById("signup_btn")
         .addEventListener("click", function () {
           document.getElementById("email").focus();
         });
+
+      var typed = new Typed("#title", {
+        strings: [
+          "for Hipster Developers.",
+          "for Awesome Developers.",
+          "that integrates with your favorite services.",
+        ],
+        typeSpeed: 60,
+        backSpeed: 20,
+        backDelay: 1500,
+        startDelay: 0,
+        loop: true,
+      });
     </script>
+    <style type="text/css" data-typed-js-css="true">
+      .typed-cursor {
+        opacity: 1;
+      }
+
+      .typed-cursor.typed-cursor--blink {
+        animation: typedjsBlink 0.7s infinite;
+        -webkit-animation: typedjsBlink 0.7s infinite;
+        animation: typedjsBlink 0.7s infinite;
+      }
+
+      @keyframes typedjsBlink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      @-webkit-keyframes typedjsBlink {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
   </body>
 </html>
